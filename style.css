@@ -1,0 +1,100 @@
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1d2636;
+  background: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: min(980px, 92%);
+  padding: 48px 0;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 5vw, 3.1rem);
+}
+
+.subtitle {
+  color: #586579;
+  margin: 0 0 38px;
+}
+
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.box {
+  min-height: 170px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, .12);
+  transition: transform .2s ease;
+}
+
+.box:hover {
+  transform: translateY(-6px);
+}
+
+.box-red {
+  background: #ef4444;
+  color: white;
+}
+
+.box-orange {
+  background: #fb923c;
+  color: #321b0d;
+}
+
+.box-yellow {
+  background: #fde047;
+  color: #3d3300;
+}
+
+.box-green {
+  background: #22c55e;
+  color: #07381b;
+}
+
+.box-blue {
+  background: #3b82f6;
+  color: white;
+}
+
+.box-purple {
+  background: #a855f7;
+  color: white;
+}
+
+@media (max-width: 650px) {
+  .boxes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .box {
+    min-height: 130px;
+  }
+}
+
+@media (max-width: 380px) {
+  .boxes {
+    grid-template-columns: 1fr;
+  }
+}
